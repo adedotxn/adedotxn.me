@@ -1,8 +1,7 @@
 <section>
-  <a href="https://adedotxn.me" class="nickname"> adedotxn</a>{" "}
-  <h1 class="title">
-    Fullstack <span>(Web)</span> Developer
-  </h1>
+  <a href="https://adedotxn.me" class="nickname"> adedotxn.</a>{" "}
+  <h1 class="name">Philip Adewole</h1>
+  <h1 class="title">Fullstack <span>(Web)</span> Developer</h1>
   <p class="bio">
     I am <span>Philip Adewole</span>. I'm a{" "}
     <span>Fullstack (Web) Developer</span> from <span>Osun, Nigeria</span>{" "}
@@ -28,8 +27,16 @@
     border-bottom: 2px solid var(--colab_orange);
   }
 
+  .name {
+    margin-top: 1rem;
+    font-size: 4.5rem;
+    line-height: 3.9rem;
+  }
+
   .title {
-    font-size: 2rem;
+    margin: 0.5rem;
+    color: var(--text-accent-00);
+    font-size: 1.83rem;
   }
 
   .title span {
@@ -48,6 +55,14 @@
   }
 
   @media screen and (min-width: 768px) {
+    .name {
+      font-size: 5rem;
+      line-height: 3.9rem;
+    }
+
+    .title {
+      font-size: 2.2rem;
+    }
     .bio {
       width: 60ch;
     }

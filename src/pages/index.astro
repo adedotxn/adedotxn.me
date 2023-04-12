@@ -14,12 +14,10 @@ import NavigationBubble from "../components/ui/NavigationBubble.astro";
     <title>Astro</title>
   </head>
   <body>
-    <div class="App">
-      <NavigationBubble to="/" />
-      <Introduction />
-      <Projects />
-      <Footer />
-    </div>
+    <NavigationBubble to="/" />
+    <Introduction />
+    <Projects />
+    <Footer />
   </body>
 </html>
 
@@ -95,6 +93,7 @@ import NavigationBubble from "../components/ui/NavigationBubble.astro";
   body {
     background-color: var(--background);
     color: var(--text-color);
+    padding: 0rem 0.5rem;
   }
 
   ul {
