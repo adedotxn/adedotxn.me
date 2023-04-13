@@ -3,7 +3,7 @@
   const allLinks = document.querySelectorAll("#links li a");
 
   allLinks.forEach((e) => {
-    const path = e.getAttribute("href").split("/").pop();
+    const path = e.getAttribute("href")?.split("/").pop();
     if (pathname.length === 0 && path === "/") {
       return e.classList.add("active");
     }
@@ -19,7 +19,7 @@
 
   <ul id="links" class="links">
     <li><a href="/">Home</a></li>
-    <li class="inactive"><a href="/blog">Blog</a></li>
+    <li><a class="inactive" role="link" aria-disabled="true">Blog</a></li>
     <li><a href="/work">Work</a></li>
     <li>
       <a
@@ -64,8 +64,13 @@
     font-size: 1.1rem;
   }
 
+  .links > li:hover,
   .active {
     text-decoration: underline;
+  }
+
+  .inactive {
+    color: grey;
   }
 
   @media screen and (min-width: 768px) {

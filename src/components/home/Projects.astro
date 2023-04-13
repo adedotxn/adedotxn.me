@@ -3,7 +3,7 @@ import { projects } from "../../utils/data";
 ---
 
 <section class="projects">
-  <h1>Public Projects</h1>
+  <h1>Things I've Built.</h1>
   <p>
     These are projects that are currently public on my{" "}
     <a href="https://github.com/adedotxn">Github</a>. Most of these are done but
@@ -85,10 +85,12 @@ import { projects } from "../../utils/data";
     padding: 0.5rem 0.8rem;
     border: 1px solid transparent;
     height: fit-content;
+    transition: transform 0.15s linear 0s, border 0.15s linear 0s;
   }
 
   .project:hover {
-    border: 1px solid var(--colab_pink);
+    transform: scale(1.05);
+    border: 1px solid grey;
   }
 
   .project_title {
