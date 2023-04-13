@@ -1,0 +1,82 @@
+<script>
+  const pathname = window.location.href.split("/").pop();
+  const allLinks = document.querySelectorAll("#links li a");
+
+  allLinks.forEach((e) => {
+    const path = e.getAttribute("href").split("/").pop();
+    if (pathname.length === 0 && path === "/") {
+      return e.classList.add("active");
+    }
+
+    if (pathname === path) {
+      return e.classList.add("active");
+    }
+  });
+</script>
+
+<nav>
+  <a href="https://adedotxn.me" class="nickname"> adedotxn.</a>{" "}
+
+  <ul id="links" class="links">
+    <li><a href="/">Home</a></li>
+    <li class="inactive"><a href="/blog">Blog</a></li>
+    <li><a href="/work">Work</a></li>
+    <li>
+      <a
+        target="_blank"
+        href="https://drive.google.com/file/d/1khtd4EDODO77k3G0WUig3AoedHEmS_fA/view?usp=sharing"
+        >Resume</a
+      >
+    </li>
+    <li>
+      <a target="_blank" href="https://github.com/adedotxn">GitHub</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://twitter.com/adedotxn">Twitter</a>
+    </li>
+    <li>
+      <a target="_blank" href="mailto:adedotxn.dev@gmail.com">Email</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.linkedin.com/in/philip-adewole"
+        >LinkedIn</a
+      >
+    </li>
+  </ul>
+</nav>
+
+<style>
+  .nickname {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    border-bottom: 2px solid transparent;
+  }
+
+  .nickname:hover {
+    border-bottom: 2px solid var(--colab_orange);
+  }
+
+  .links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 70vw;
+    font-size: 1.1rem;
+  }
+
+  .active {
+    text-decoration: underline;
+  }
+
+  @media screen and (min-width: 768px) {
+    .links {
+      width: 30vw;
+      font-size: 1rem;
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    .nickname {
+      font-size: 1.3rem;
+    }
+  }
+</style>

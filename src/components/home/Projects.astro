@@ -14,7 +14,7 @@ import { projects } from "../../utils/data";
   <section>
     {
       projects.map((project, index) => (
-        <div class="project">
+        <article class="project">
           <h2 class="project_title">{project.title}</h2>
           <p class="project_desc">
             {project.description}
@@ -54,7 +54,7 @@ import { projects } from "../../utils/data";
               </li>
             ) : null}
           </ul>
-        </div>
+        </article>
       ))
     }
   </section>
