@@ -1,3 +1,7 @@
+---
+import arrowSvg from "../../assets/arrow.svg";
+---
+
 <script>
   const pathname = window.location.href.split("/").pop();
   const allLinks = document.querySelectorAll("#links li a");
@@ -20,27 +24,52 @@
   <ul id="links" class="links">
     <li><a href="/">Home</a></li>
     <li><a class="inactive" role="link" aria-disabled="true">Blog</a></li>
-    <li><a href="/work">Work</a></li>
     <li>
-      <a
-        target="_blank"
-        href="https://drive.google.com/file/d/1khtd4EDODO77k3G0WUig3AoedHEmS_fA/view?usp=sharing"
-        >Resume</a
-      >
+      <a target="_blank" href="https://read.cv/adedotun">Resume</a>
+      <img
+        src={arrowSvg.src}
+        width={arrowSvg.width}
+        height={arrowSvg.height}
+        alt="Go view Philip's Resume"
+      />
     </li>
     <li>
       <a target="_blank" href="https://github.com/adedotxn">GitHub</a>
+      <img
+        src={arrowSvg.src}
+        width={arrowSvg.width}
+        height={arrowSvg.height}
+        alt="Go to Philip's GitHub"
+      />
     </li>
     <li>
       <a target="_blank" href="https://twitter.com/adedotxn">Twitter</a>
+      <img
+        src={arrowSvg.src}
+        width={arrowSvg.width}
+        height={arrowSvg.height}
+        alt="Go to Philip's Twitter"
+      />
     </li>
     <li>
       <a target="_blank" href="mailto:adedotxn.dev@gmail.com">Email</a>
+      <img
+        src={arrowSvg.src}
+        width={arrowSvg.width}
+        height={arrowSvg.height}
+        alt="Email Philip"
+      />
     </li>
     <li>
       <a target="_blank" href="https://www.linkedin.com/in/philip-adewole"
         >LinkedIn</a
       >
+      <img
+        src={arrowSvg.src}
+        width={arrowSvg.width}
+        height={arrowSvg.height}
+        alt="Go to LinkedUn"
+      />
     </li>
   </ul>
 </nav>
@@ -59,9 +88,16 @@
 
   .links {
     display: grid;
+    column-gap: 0.9rem;
+    row-gap: 0.2rem;
     grid-template-columns: repeat(4, 1fr);
     width: 70vw;
     font-size: 1.1rem;
+  }
+
+  .links > li {
+    display: flex;
+    align-items: center;
   }
 
   .links > li:hover,
@@ -77,7 +113,7 @@
     .links {
       width: 30vw;
       font-size: 1rem;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
 
     .nickname {

@@ -20,10 +20,11 @@ import { projects } from "../../utils/data";
             {project.description}
             {project.description.includes("Savelink") ? (
               <>
-                There's also a chrome extension I built for it{" "}
+                There's also a{" "}
                 <a href="https://github.com/adedotxn/savelink-chrome-extension">
-                  here
-                </a>
+                  chrome extension
+                </a>{" "}
+                I built for it.
               </>
             ) : null}
           </p>
@@ -67,6 +68,12 @@ import { projects } from "../../utils/data";
     text-decoration: underline;
     text-decoration-color: var(--colab_orange);
     text-decoration-thickness: 2px;
+  }
+
+  @media (prefers-color-scheme: light) {
+    .projects > p {
+      filter: brightness(80%);
+    }
   }
 
   .projects > p {

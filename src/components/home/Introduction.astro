@@ -20,6 +20,7 @@
     margin-top: 1rem;
     font-size: 4.5rem;
     line-height: 3.9rem;
+    font-weight: 800;
   }
 
   .title {
@@ -36,6 +37,11 @@
     font-size: 1.1rem;
     width: 90vw;
     color: var(--text-accent);
+  }
+  @media (prefers-color-scheme: light) {
+    .bio {
+      filter: brightness(70%);
+    }
   }
 
   .bio span {

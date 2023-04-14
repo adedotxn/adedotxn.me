@@ -1,13 +1,38 @@
 ---
 import Footer from "../home/Footer.astro";
 import Navigation from "./Navigation.astro";
+import "@fontsource/inter-tight";
+import "@fontsource/inter-tight/600.css";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon_io/site.webmanifest" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="adedotxn's website" />
+    <meta
+      name="keywords"
+      content="philip adewole,adedotxn, engineer, software developer, frontend developer"
+    />
+    <meta name="author" content="Philip Adewole (adedotxn)" />
     <meta name="generator" content={Astro.generator} />
     <title>adedotxn.</title>
   </head>
@@ -21,8 +46,6 @@ import Navigation from "./Navigation.astro";
 </html>
 
 <style is:global>
-  @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap");
-
   * {
     border: 0;
     padding: 0;
@@ -30,9 +53,7 @@ import Navigation from "./Navigation.astro";
   }
 
   :root {
-    font-family: "Inter Tight", sans-serif;
     line-height: 1.5;
-    font-weight: 400;
     font-size: 16px;
 
     background-color: var(--background);
@@ -90,6 +111,7 @@ import Navigation from "./Navigation.astro";
   }
 
   body {
+    font-family: "Inter Tight", sans-serif;
     background-color: var(--background);
     color: var(--text-color);
     padding: 0rem 0.5rem;
