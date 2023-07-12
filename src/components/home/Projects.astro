@@ -15,7 +15,10 @@ import { projects } from "../../utils/data";
     {
       projects.map((project, index) => (
         <article class="project">
-          <h2 class="project_title">{project.title}</h2>
+          <h2 class="project_title">
+            {" "}
+            <span>&gt;</span> {project.title}
+          </h2>
           <p class="project_desc">
             {project.description}
             {project.description.includes("Savelink") ? (
@@ -66,7 +69,7 @@ import { projects } from "../../utils/data";
     margin-top: 3rem;
     font-size: 1.3rem;
     text-decoration: underline;
-    text-decoration-color: var(--colab_orange);
+    text-decoration-color: var(--dotxn-orange);
     text-decoration-thickness: 2px;
   }
 
@@ -88,16 +91,24 @@ import { projects } from "../../utils/data";
   }
 
   .project {
-    background-color: var(--accent-color);
+    /* background-color: var(--accent-color); */
     padding: 0.5rem 0.8rem;
     border: 1px solid transparent;
     height: fit-content;
-    transition: transform 0.15s linear 0s, border 0.15s linear 0s;
+    transition: transform 0.28s linear 0s, border 0.15s linear 0s,
+      background-color 0.15s linear 0s;
+    border-radius: 0.5rem;
+  }
+
+  .project > h2 > span {
+    color: var(--text-accent);
+    font-size: 1rem;
   }
 
   .project:hover {
-    transform: scale(1.05);
-    border: 1px solid grey;
+    transform: translateY(-5%);
+    /* background-color: #09090b; */
+    border: 1px solid #27272a;
   }
 
   .project_title {
@@ -129,15 +140,18 @@ import { projects } from "../../utils/data";
   }
 
   .project_links > li > a {
-    color: var(--colab_dark-purple);
+    color: var(--dotxn-dark-purple);
   }
 
   @media screen and (min-width: 768px) {
+    .project {
+      cursor: pointer;
+    }
     .projects > p {
       width: 85ch;
     }
-    .projects section {
+    /* .projects section {
       grid-template-columns: repeat(2, 1fr);
-    }
+    } */
   }
 </style>

@@ -14,18 +14,20 @@ export const projects: Projects = [
     live_site: "https://savelink.vercal.app",
   },
   {
+    title: "Block Party",
+    description:
+      "BlockParty is an MVP of a neighborhood app that meets all neighborhood needs in one place - bringing together people who share interests, and facilitate local support and collaborations. For the MVP, we are focusing on matching people who share interests.",
+    source_code: "https://github.com/adedotxn/block-party",
+    live_site: "https://the-blockparty.vercel.app/invite/P15Ry1",
+  },
+  {
     title: "MovLibrary 🎬",
     description:
       "A web app for getting information about movies — upcoming, popular, trending. Informations like Release date, genre, rating, etc.",
     source_code: "https://github.com/adedotxn/movlibrary",
     live_site: "https://movlibrary.vercel.app",
   },
-  {
-    title: "Octauth 🔐",
-    description:
-      "An authentication api for Github and Twitter Oauth. I built this because authentication is a pain point for me and also to be able to use when building simple projects.",
-    source_code: "https://github.com/adedotxn/oct-auth",
-  },
+
   {
     title: "Tagbookmarks 🔖",
     description:
